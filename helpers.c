@@ -35,7 +35,15 @@ int print_string(va_list list)
 	}
 	return (i);
 }
-int count_characters(unsigned int n)
+
+/**
+ * counter - a function that counts characters
+ * @n: an unsigned integer
+ *
+ * Return: Always Successfully
+ */
+
+int counter(unsigned int n)
 {
 	int count = 0;
 
@@ -46,13 +54,21 @@ int count_characters(unsigned int n)
 		z = (n / 10);
 		x = (n % 10);
 
-		count += count_characters(z);
+		count += counter(z);
 		count++;
 		_putchar(x + '0');
 		return (count);
 	}
 	return (0);
 }
+
+
+/**
+ * print_number - prints out an integer (%d or %i)
+ * @list: a list of arguments
+ *
+ * Return: the length of charcters
+ */
 
 int print_number(va_list list)
 {
@@ -74,7 +90,7 @@ int print_number(va_list list)
 
 	if (x > 9)
 	{
-		return (b + count_characters(x));
+		return (b + counter(x));
 	}
 	_putchar(x + '0');
 	return (1 + b);
