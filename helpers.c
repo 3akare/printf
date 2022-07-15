@@ -18,16 +18,16 @@ int print_character(va_list list)
  * print_string - prints out a string (%s)
  * @list: a list of arguments
  *
- * Return 1.
+ * Return: 1.
  */
 
 int print_string(va_list list)
 {
 	char *str = va_arg(list, char *);
 	int i = 0;
+
 	if (str == NULL)
 		str = "(null)";
-		
 	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
