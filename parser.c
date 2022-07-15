@@ -14,6 +14,7 @@ int (*parser(const char *argument1, int argument2))(va_list)
 	string_format list[] = {
 		{"c", print_character},
 		{"s", print_string},
+		{"d", print_number},
 		{NULL, NULL},
 	};
 	int i;

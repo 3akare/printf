@@ -8,4 +8,5 @@ int main(void)
 	int len2 = printf("String:[%s]\n", "I am a string !");
 
 	printf("[%d][%d]", len, len2);
+	_printf("[%d][%d]", len, len2);
 }

@@ -35,3 +35,47 @@ int print_string(va_list list)
 	}
 	return (i);
 }
+int count_characters(unsigned int n)
+{
+	int count = 0;
+
+	unsigned int x, z;
+
+	if (n != 0)
+	{
+		z = (n / 10);
+		x = (n % 10);
+
+		count += count_characters(z);
+		count++;
+		_putchar(x + '0');
+		return (count);
+	}
+	return (0);
+}
+
+int print_number(va_list list)
+{
+	int a, b = 0;
+	unsigned int x;
+
+	a = va_arg(list, int);
+
+	if (a < 0)
+	{
+		_putchar('-');
+		b = 1;
+		x = a * (-1);
+	}
+	else
+	{
+		x = a;
+	}
+
+	if (x > 9)
+	{
+		return (b + count_characters(x));
+	}
+	_putchar(x + '0');
+	return (1 + b);
+}
