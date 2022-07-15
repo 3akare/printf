@@ -4,7 +4,7 @@
  * _putchar - a function that prints out a character
  * @c: the character to be printed out
  *
- * Return 1
+ * Return: 1
  */
 
 int _putchar(char c)
