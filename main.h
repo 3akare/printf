@@ -23,5 +23,6 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int (*parser(const char *argument1, int argument2))(va_list);
 int print_character(va_list list);
+int print_string(va_list list);
 
 #endif

@@ -13,3 +13,14 @@ int print_character(va_list list)
 
 	return (1);
 }
+
+/**
+ * print_string - prints out a string (%s)
+ * @list: a list of arguments
+ *
+ * Return 1.
+ */
+
+int print_string(va_list list)
+{
+}
