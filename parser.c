@@ -15,7 +15,7 @@ int (*parser(const char *argument1, int argument2))(va_list)
 		{"c", print_character},
 		{"s", print_string},
 		{"d", print_number},
-		{"i", print_numebr},
+		{"i", print_number},
 		{NULL, NULL},
 	};
 	int i;
