@@ -2,12 +2,12 @@
 
 /**
  * print_character - prints out a character (%c)
- * @list: list of arguments
+ * @list: a list of arguments
  *
- * Return: Always successfully
+ * Return: 1.
  */
 
-int _print_character(va_list list)
+int print_character(va_list list)
 {
 	_putchar(va_arg(list, int));
 

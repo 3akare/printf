@@ -1,23 +1,21 @@
 #include "main.h"
-
 /**
  * _printf - prints out a formatted string
  * @format: the string to be formatted
  *
- * Return: the length of the formatted string
+ * Return: the number of characters printed
  */
 
 int _printf(const char *format, ...)
 {
-	int i = 0, count = 0;
-
 	va_list list;
+	unsigned int i = 0,count = 0;
 
 	va_start(list, format);
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
-	while (format[i] != '%')
+	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{

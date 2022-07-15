@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * parser - selects the right function dependent on the
- * the charcter that follows '%'
+ * *parser - selects the right function to
+ * format a string
  * @argument1: the first argument
  * @argument2: the second argument
  *
@@ -12,15 +12,14 @@
 int (*parser(const char *argument1, int argument2))(va_list)
 {
 	string_format list[] = {
-		{"c", _print_character},
+		{"c", print_character},
 		{NULL, NULL},
 	};
-
 	int i;
 
-	for (i = 0; list[i].character != NULL; i++)
+	for (i = 0; list[i].argument != NULL; i++)
 	{
-		if (list[i].character[0] == argument1[argument2])
+		if (list[i].argument[0] == argument1[argument2])
 		{
 			return (list[i].function);
 		}
