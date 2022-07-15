@@ -7,7 +7,7 @@
  * Return: Always successfully
  */
 
-int print_character(va_list list)
+int _print_character(va_list list)
 {
 	_putchar(va_arg(list, int));
 
