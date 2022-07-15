@@ -20,6 +20,7 @@ typedef struct string_format
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int _print_character(va_list list);
 int (*parser(const char *argument1, int argument2))(va_list);
 
 #endif
