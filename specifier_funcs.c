@@ -9,9 +9,10 @@
 int print_integer(va_list argument)
 {
 	int number = va_arg(argument, int);
+	int len = 0;
 
-	print_number(number);
-	return (2);
+	len = print_number(number);
+	return (len + 1);
 }
 
 /**

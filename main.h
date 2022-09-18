@@ -34,7 +34,7 @@ int print_string(va_list argument);
 int print_character(va_list argument);
 
 /** helper functions **/
-void print_number(int n);
+int print_number(int n);
 int _puts(char *s);
 int search(char c);
 

@@ -3,20 +3,27 @@
 /**
  * print_number - prints an integer
  * @n: an integer
+ * Return: the length of the integer
  */
 
-void print_number(int n)
+int print_number(int n)
 {
 	unsigned int num = n;
+	unsigned int len = 0;
 
 	if (n < 0)
 	{
 		putchar('-');
-		num -= num;
+		num *= -1;
+		len++;
 	}
 	if ((num / 10) > 0)
-		print_number(num / 10);
+	{
+		len++;
+		len += print_number(num / 10);
+	}
 	putchar((num % 10) + '0');
+	return (len);
 }
 
 /**
