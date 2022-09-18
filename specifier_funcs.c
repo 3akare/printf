@@ -26,11 +26,6 @@ int print_string(va_list argument)
 	char *str;
 	int len = 0;
 
-	if (va_arg(argument, char *) == NULL)
-	{
-		printf("(null)");
-		return (strlen("(null)"));
-	}
 	str = strdup(va_arg(argument, char *));
 	len = _puts(str);
 	free(str);
