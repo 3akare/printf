@@ -1,97 +1,27 @@
-#include "main.h"
+#include "printf.h"
 
-/**
- * print_character - prints out a character (%c)
- * @list: a list of arguments
- *
- * Return: 1.
- */
-
-int print_character(va_list list)
+void print_number(int n)
 {
-	_putchar(va_arg(list, int));
+	unsigned int num = n;
 
-	return (1);
+	if (n < 0)
+	{
+		putchar('-');
+		num = -num;
+	}
+	if ((num / 10) > 0)
+		print_number(num / 10);
+	putchar((num % 10) + '0');
 }
 
-/**
- * print_string - prints out a string (%s)
- * @list: a list of arguments
- *
- * Return: 1.
- */
-
-int print_string(va_list list)
+int _puts(char *s)
 {
-	char *str = va_arg(list, char *);
-	int i = 0;
-
-	if (str == NULL)
-		str = "(null)";
-	while (str[i] != '\0')
-	{
-		_putchar(str[i]);
-		i++;
-	}
-	return (i);
-}
-
-/**
- * counter - a function that counts characters
- * @n: an unsigned integer
- *
- * Return: Always Successfully
- */
-
-int counter(unsigned int n)
-{
-	int count = 0;
-
-	unsigned int x, z;
-
-	if (n != 0)
-	{
-		z = (n / 10);
-		x = (n % 10);
-
-		count += counter(z);
-		count++;
-		_putchar(x + '0');
-		return (count);
-	}
-	return (0);
-}
-
-
-/**
- * print_number - prints out an integer (%d or %i)
- * @list: a list of arguments
- *
- * Return: the length of charcters
- */
-
-int print_number(va_list list)
-{
-	int a, b = 0;
-	unsigned int x;
-
-	a = va_arg(list, int);
-
-	if (a < 0)
-	{
-		_putchar('-');
-		b = 1;
-		x = a * (-1);
-	}
-	else
-	{
-		x = a;
-	}
-
-	if (x > 9)
-	{
-		return (b + counter(x));
-	}
-	_putchar(x + '0');
-	return (1 + b);
+    int len = 0;
+    while(*s && *s != '\n')
+    {
+        putchar(*s);
+        *s++;
+        len++;
+    }
+    return(len);
 }
