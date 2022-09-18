@@ -10,7 +10,7 @@
 
 int _printf(const char *format, ...)
 {
-	int char_len = 0;
+	int char_len = 0, success = 1;
 	spec_t f_specifier;
 	va_list args;
 
@@ -22,10 +22,10 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			f_specifier.c = *format++;
-			if (*format == '%')
+			success = search(*format);
+			if (success != 0)
 			{
-				putchar('%');
-				char_len++;
+				char_len += success;
 				f_specifier.c = *format++;
 				continue;
 			}

@@ -37,12 +37,26 @@ int _puts(char *s)
 	return (len);
 }
 /**
- * die - prints an error message and kills the program
- * @s: the error message
+ * search - looks for non-specifiers
+ * @c: a character
+ * Return: 2 on success and 0 on fail
  */
 
-void die(char *s)
+int search(char c)
 {
-	dprintf(STDERR_FILENO, "%s", s);
-	exit(0);
+	int i = 0;
+	char arr[] = "abefghjklmonpqrtuvwxyz%!";
+
+	for (i = 0; arr[i]; i++)
+	{
+		if (c == arr[i] || c == (arr[i] + 32))
+		{
+			putchar('%');
+			if (c == '%')
+				return (1);
+			putchar(c);
+			return (2);
+		}
+	}
+	return (0);
 }

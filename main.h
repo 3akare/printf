@@ -36,6 +36,6 @@ int print_character(va_list argument);
 /** helper functions **/
 void print_number(int n);
 int _puts(char *s);
-void die(char *s);
+int search(char c);
 
 #endif
