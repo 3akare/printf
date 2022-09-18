@@ -45,7 +45,7 @@ int _puts(char *s)
 int search(char c)
 {
 	int i = 0;
-	char arr[] = "abefghjklmonpqrtuvwxyz%!";
+	char arr[] = "abefghjKlmonpqrtuvwxyz%!";
 
 	for (i = 0; arr[i]; i++)
 	{
