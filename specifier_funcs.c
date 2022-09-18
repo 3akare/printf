@@ -27,6 +27,7 @@ int print_string(va_list argument)
 
 	str = strdup(va_arg(argument, char *));
 	len = _puts(str);
+    free(str);
 	return (len);
 }
 

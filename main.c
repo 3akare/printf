@@ -2,8 +2,16 @@
 
 int main(void)
 {
-    _printf("Complete the sentence: You %s nothing, Jon Snow.\n","(char *)0");
-   printf("Complete the sentence: You %s nothing, Jon Snow.\n", "(char *)0");
-    return (0);
-    // printf("%");
+	int len, len2;
+
+	len = _printf("%c%cth %s%s a%cg%s: Y%sou %s no%ching%s Snow.%c", 'W', 'i', "some ", "more", 'r', "s", "", "know", 't', ", Jon", '\n');
+	len2 = printf("%c%cth %s%s a%cg%s: Y%sou %s no%ching%s Snow.%c", 'W', 'i', "some ", "more", 'r', "s", "", "know", 't', ", Jon", '\n');
+	fflush(stdout);
+	if (len != len2)
+	{
+		printf("Lengths differ.\n");
+		fflush(stdout);
+		return (1);
+	}
+	return (0);
 }
