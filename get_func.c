@@ -11,15 +11,20 @@
 opcode get_func(char c)
 {
 	int i = 0;
+	int len = 0;
+
 	spec_t specifiers[] = {
 		{'d', print_integer},
 		{'c', print_character},
 		{'s', print_string},
 		{'i', print_integer},
+		{'b', print_binary_2},
 		{0, NULL}
 	};
 	/** find a way to get the exact len int specifiers **/
-	for (i = 0; i < 4; i++)
+	while (specifiers[len].opcode != NULL)
+		len++;
+	for (i = 0; i < len; i++)
 	{
 		if (specifiers[i].c == c)
 		{

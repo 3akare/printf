@@ -52,7 +52,7 @@ int _puts(char *s)
 int search(char c)
 {
 	int i = 0;
-	char arr[] = "abefghjKlmonpqrtuvwxyz%!";
+	char arr[] = "aefghjKlmonpqrtuvwxyz%!";
 
 	for (i = 0; arr[i]; i++)
 	{
@@ -66,4 +66,23 @@ int search(char c)
 		}
 	}
 	return (0);
+}
+
+/**
+ * print_binary - prints out an integer in binary format
+ * @n: an integer
+ * Return: the length of the integer in binary format
+ */
+
+int print_binary(int n)
+{
+	int len = 0;
+
+	if (n > 1)
+	{
+		len++;
+		len += print_binary(n >> 1);
+	}
+	putchar((n & 1) + '0');
+	return (len);
 }
