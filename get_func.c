@@ -26,7 +26,6 @@ opcode get_func(char c)
 			return (specifiers[i].opcode);
 		}
 	}
-	dprintf(STDERR_FILENO, "get func failed\n");
-	exit(0);
+	return (NULL);
 }
 

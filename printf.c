@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 	if (!format)
-		die("non-null required\n");
+		return (-1);
 	while (*format)
 	{
 		if (*format == '%')
@@ -32,10 +32,10 @@ int _printf(const char *format, ...)
 			else
 			{
 				f_specifier.opcode = get_func(*format);
-				if (!f_specifier.opcode)
-					die("_printf failed\n");
+				if (f_specifier.opcode == NULL)
+					return (-1);
 				char_len += f_specifier.opcode(args);
-				f_specifier.c =*format++;
+				f_specifier.c = *format++;
 				continue;
 			}
 		}
