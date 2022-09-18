@@ -1,26 +1,24 @@
-#include "printf.h"
-
-int add(int b, ...)
-{
-    spec_t hey;
-    hey.opcode = get_func('d');
-
-    va_list list_of_args;
-    va_start(list_of_args, b);
-    for (int n = 0; n < b; n++)
-    {
-        hey.opcode(list_of_args);
-    }
-}
+#include "main.h"
 
 int main(void)
 {
-    int j = 90;
-    // char j = 'j';
-    char fish[] = "Ade";
+    int len;
+    int len2;
 
-    int n = printf("%s %s %d %d %c\n",fish, "ade", j, j, j);
-    printf("%d\n", n);
-    n = _printf("%s %s %d %d %c\n", fish, "ade", j, j, j);
-    _printf("%d\n", n);
+    len = _printf("Let's try to printf a simple sentence.\n");
+    len2 = printf("Let's try to printf a simple sentence.\n");
+    len = _printf("Percent:[%%]\n");
+    len2 = printf("Percent:[%%]\n");
+    _printf("Len:[%d]\n", len);
+    printf("Len:[%d]\n", len2);
+    _printf("String:[%s]\n", "I am a string !");
+    printf("String:[%s]\n", "I am a string !");
+    len = _printf("Percent:[%%]\n");
+    len2 = printf("Percent:[%%]\n");
+    _printf("Length:[%d, %i]\n", len, len);
+    printf("Length:[%d, %i]\n", len2, len2);
+    _printf("Negative:[%d]\n", -762534);
+    printf("Negative:[%d]\n", -762534);
+
+    return (0);
 }

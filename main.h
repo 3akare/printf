@@ -1,5 +1,5 @@
-#ifndef _PRINT_H_
-#define _PRINT_H_
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,27 +9,33 @@
 
 typedef int (*opcode)(va_list args);
 
+/**
+ * struct specifier_s - a structure conatining a character
+ * and a function pointer
+ * @c: a character
+ * @opcode: a function pointer
+ */
+
 typedef struct specifier_s
 {
-    char c;
-    int (*opcode)(va_list args);
+	char c;
+	int (*opcode)(va_list args);
 } spec_t;
 
 /** _printf **/
+
 int _printf(const char *format, ...);
 
-/** function fetcher **/
+/** function getter **/
 opcode get_func(char c);
-
 
 int print_integer(va_list argument);
 int print_string(va_list argument);
 int print_character(va_list argument);
 
-/** helper function **/
-
+/** helper functions **/
 void print_number(int n);
 int _puts(char *s);
-int _printf(const char *format, ...);
+void die(char *s);
 
 #endif

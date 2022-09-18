@@ -1,5 +1,5 @@
 # _printf
-A formatted output conversion C program. It is a puesdo-recreation of the C standard libray function `printf`
+A formatted output conversion C program. It is a puesdo-recreation of the C standard library function `printf`
 
 ## Synopsis
 `int _printf(const char *format, ...);`
@@ -23,10 +23,10 @@ Complilation:
     gcc -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 *.c -o tester
 ```
 Output:
-```  
+```
     $ ./tester
     This is an implementation of printf
-    $    
+    $
 ```
 ## Description
 The `_prinft()` function produces output in accordance to a specified format. This function prints its output to the stdout and returns the lenght of the output when successful.
@@ -39,7 +39,7 @@ The `_prinft()` function produces output in accordance to a specified format. Th
 - %%: Print the percentage sign
 
 # Author
-- David Bakare 
+- David Bakare
 # Acknowledgments
 This project was written as part of the curriculum for Holberton/ALX-SE program
 
