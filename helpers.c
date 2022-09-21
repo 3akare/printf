@@ -100,7 +100,9 @@ int print_binary(int n)
 	{
 		n *= -1;
 		len += neg_print_binary(n, len);
+		len--;
 	}
+
 	len += pos_print_binary(n);
 	return (len);
 }

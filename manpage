@@ -23,8 +23,10 @@ _printf \- A formatted output conversion C program. It is a puesdo-recreation of
 
     %%: Print the percentage sign
 
+    %b : binary specifier
+
 .SH BUGS
-    No Known Bugs
+    binary specifier might not give the right output for integer less than -2
 
 .SH AUTHOR
     David Bakare
