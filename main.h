@@ -32,12 +32,14 @@ opcode get_func(char c);
 int print_integer(va_list argument);
 int print_string(va_list argument);
 int print_character(va_list argument);
-int print_binary_2(va_list argument);
+int print_binary_arg(va_list argument);
 
 /** helper functions **/
 int print_number(int n);
 int _puts(char *s);
 int search(char c);
 int print_binary(int n);
+int neg_print_binary(int n, int len);
+int pos_print_binary(int n);
 
 #endif

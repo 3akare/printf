@@ -78,11 +78,11 @@ int print_binary(int n)
 {
 	int len = 0;
 
-	if (n > 1)
+	if (n < 0)
 	{
-		len++;
-		len += print_binary(n >> 1);
+		n *= -1;
+		len += neg_print_binary(n, len);
 	}
-	putchar((n & 1) + '0');
+	len += pos_print_binary(n);
 	return (len);
 }

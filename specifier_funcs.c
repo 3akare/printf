@@ -47,12 +47,12 @@ int print_character(va_list argument)
 }
 
 /**
- * print_binary_2 - prints an int in binary format
+ * print_binary_arg - prints an int in binary format
  * @argument: an argument
  * Return: return len of int in binary format
  */
 
-int print_binary_2(va_list argument)
+int print_binary_arg(va_list argument)
 {
 	int num = 0;
 	int len = 0;
