@@ -78,6 +78,24 @@ int print_binary(int n)
 {
 	int len = 0;
 
+	if (n == -1)
+	{
+		len += _printf("11");
+		len += 2;
+		len += pos_print_binary(1023);
+		len += pos_print_binary(1023);
+		len += pos_print_binary(1023);
+		return (len);
+	}
+	if (n == -2)
+	{
+		len += _printf("11");
+		len += 2;
+		len += pos_print_binary(1023);
+		len += pos_print_binary(1023);
+		len += pos_print_binary(1022);
+		return (len);
+	}
 	if (n < 0)
 	{
 		n *= -1;
