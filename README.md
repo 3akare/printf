@@ -37,7 +37,10 @@ The `_prinft()` function produces output in accordance to a specified format. Th
 - %i: Integer specifier
 - %s: String specifier (character pointer)
 - %%: Print the percentage sign
+
+## Custom Specifiers
 - %b: Binary specifier
+- %R: rot13'ed specifier
 
 # Author
 - David Bakare

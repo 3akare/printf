@@ -34,6 +34,7 @@ int print_string(va_list argument);
 int print_character(va_list argument);
 int print_binary_arg(va_list argument);
 int rot13_arg(va_list argument);
+int reverse_string_arg(va_list argument);
 
 /** helper functions **/
 int print_number(int n);
@@ -43,5 +44,6 @@ int print_binary(int n);
 int neg_print_binary(int n, int len);
 int pos_print_binary(int n);
 int rot13(char *str);
+int reverse_string(char *str);
 
 #endif

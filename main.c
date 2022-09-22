@@ -5,7 +5,7 @@ int main(void)
 {
     int len = 0;
 
-    len = _printf("Complete the sentence: You %R nothing, Jon snow.\n", "xabj");
+    len = _printf("Complete the sentence: You %r nothing, Jon snow.\n", "nhoj");
     _printf("%d\n", len);
     return (0);
 }
