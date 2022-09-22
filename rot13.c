@@ -9,37 +9,31 @@
 int rot13(char *str)
 {
 	int i = 0, j = 0;
-	char *ptr;
 	char alpha1[13] = "abcdefghijklm";
 	char alpha2[13] = "nopqrstuvwxyz";
 
-
-	ptr = malloc(strlen(str) * sizeof(char));
-	strcpy(ptr, str);
-
-	while (ptr[i])
+	while (str[i])
 	{
 		for (j = 0; j <= 12; j++)
 		{
-			if (ptr[i] >= 'A' && ptr[i] <= 'Z')
+			if (str[i] >= 'A' && str[i] <= 'Z')
 			{
-				if (ptr[i] == (alpha1[j] - 32))
-					ptr[i] = (alpha2[j] - 32);
-				else if (ptr[i] == (alpha2[j] - 32))
-					ptr[i] = (alpha1[j] - 32);
+				if (str[i] == (alpha1[j] - 32))
+					str[i] = (alpha2[j] - 32);
+				else if (str[i] == (alpha2[j] - 32))
+					str[i] = (alpha1[j] - 32);
 			}
-			else if (ptr[i] >= 'a' && ptr[i] <= 'z')
+			else if (str[i] >= 'a' && str[i] <= 'z')
 			{
-				if (ptr[i] == alpha1[j])
-					ptr[i] = alpha2[j];
-				else if (ptr[i] == alpha2[j])
-					ptr[i] = alpha1[j];
+				if (str[i] == alpha1[j])
+					str[i] = alpha2[j];
+				else if (str[i] == alpha2[j])
+					str[i] = alpha1[j];
 			}
 		}
 		i++;
 	}
-	_puts(ptr);
-	free(ptr);
+	_puts(str);
 	return (i);
 }
 /**
