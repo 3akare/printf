@@ -3,15 +3,9 @@
 
 int main(void)
 {
-    int len = _printf("%b", -1024);
-    int len2 =_printf("11111111111111111111110000000000");
-    fflush(stdout);
-	if (len != len2)
-	{
-		printf("Lengths differ.\n");
-		fflush(stdout);
-		return (1);
-	}
+    int len = 0;
 
-	return (0);
+    len = _printf("Complete the sentence: You %R nothing, Jon snow.\n", "xabj");
+    _printf("%d\n", len);
+    return (0);
 }

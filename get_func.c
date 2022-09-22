@@ -19,6 +19,7 @@ opcode get_func(char c)
 		{'s', print_string},
 		{'i', print_integer},
 		{'b', print_binary_arg},
+		{'R', rot13_arg},
 		{0, NULL}
 	};
 	/** find a way to get the exact len int specifiers **/

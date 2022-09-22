@@ -28,5 +28,14 @@ _printf \- A formatted output conversion C program. It is a puesdo-recreation of
 .SH BUGS
     binary specifier might not give the right output for integer less than -2
 
+.SH EXAMPLE
+    To print a date and time in the form "Sunday, July 3, 10:02", where weekday and month are pointers to strings:
+        #include <stdio.h>
+        _printf("%s, %s %d, %.2d:%.2d\n",
+            weekday, month, day, hour, min);
+
+.SH SEE ALSO
+    puts(3) printf(3) scanf(3)
+
 .SH AUTHOR
     David Bakare
