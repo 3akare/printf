@@ -41,6 +41,7 @@ The `_prinft()` function produces output in accordance to a specified format. Th
 ## Custom Specifiers
 - %b: Binary specifier
 - %R: rot13'ed specifier
+- %r: reversed specifier
 
 # Author
 - David Bakare

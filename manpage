@@ -4,10 +4,10 @@
 _printf \- A formatted output conversion C program. It is a puesdo-recreation of the C standard libray function _printf
 
 .SH SYNOPSIS
-    int _printf(const char *format, ...);
+    'int _printf(const char *format, ...);'
 
 .SH DESCRIPTION
-    The _prinft() function produces output in accordance to a specified format. This function prints its output to the stdout and returns the lenght of the output when successful.
+    The '_prinft()' function produces output in accordance to a specified format. This function prints its output to the stdout and returns the lenght of the output when successful.
 
 .SH RETURN VALUE
     returns the number of charcaters printed
@@ -26,19 +26,21 @@ _printf \- A formatted output conversion C program. It is a puesdo-recreation of
 .SH CUSTOM SPECIFIERS
     %b : binary specifier
 
-    %R : rot'ed13 specifier
+    %R : rot13 specifier
+
+    %r : reversed specifier
 
 .SH BUGS
     binary specifier might not give the right output for integer less than -2
 
 .SH EXAMPLE
     To print a date and time in the form "Sunday, July 3, 10:02", where weekday and month are pointers to strings:
-        #include <stdio.h>
+        '#include <stdio.h>
         _printf("%s, %s %d, %.2d:%.2d\n",
-            weekday, month, day, hour, min);
+            weekday, month, day, hour, min);'
 
 .SH SEE ALSO
-    puts(3) printf(3) scanf(3)
+    'puts(3) printf(3) scanf(3)''
 
 .SH AUTHOR
     David Bakare
