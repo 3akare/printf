@@ -22,6 +22,7 @@ opcode get_func(char c)
 		{'R', rot13_arg},
 		{'r', reverse_string_arg},
 		{'o', octal_arg},
+		{'u', unsigned_arg},
 		{'x', hexadecimal_arg},
 		{'X', HEXADECIMAL_arg},
 		{0, NULL}

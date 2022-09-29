@@ -6,9 +6,7 @@
 
 int main(void)
 {
-	int len = _printf("%X%x%o\n", 12, 12, 12);
+	int len = _printf("%u + %u\n", UINT_MAX, INT_MAX);
 	_printf("%d\n", len);
-	len = printf("%X%x%o\n", 12, 12, 12);
-	printf("%d\n", len);
 	return (0);
 }

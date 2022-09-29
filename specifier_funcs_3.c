@@ -16,12 +16,31 @@ int hexadecimal_arg(va_list argument)
 	str = (convert(num, 16));
 	while (*str)
 	{
-		if (*str >= 65 && *str <= 90)
+		if (*str >= '0' && *str <= '9')
 		{
-			*str += 32;
+			len++;
 			putchar(*str++);
+			continue;
 		}
+		else
+			*str += 32;
+		putchar(*str++);
 		len++;
 	}
 	return (len);
+}
+
+/**
+ * unsigned_arg - prints unsigned integer
+ * @argument: an argument
+ * Return: return len of int in binary format
+ */
+
+int unsigned_arg(va_list argument)
+{
+	unsigned int number = va_arg(argument, unsigned int);
+	int len = 0;
+
+	len = unsigned_print_number(number);
+	return (len + 1);
 }

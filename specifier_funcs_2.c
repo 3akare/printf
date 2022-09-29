@@ -60,10 +60,10 @@ int octal_arg(va_list argument)
 
 int HEXADECIMAL_arg(va_list argument)
 {
-	int num = 0;
+	long int num = 0;
 	int len = 0;
 
-	num = va_arg(argument, int);
+	num = va_arg(argument, long int);
 	len = _puts(convert(num, 16));
 	return (len);
 }
