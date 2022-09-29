@@ -7,6 +7,10 @@ A formatted output conversion C program. It is a puesdo-recreation of the C stan
 ## Dependencies
 All files will be complied on Ubuntu 20.04LTS using gcc, using the options `gcc -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 *.c`
 
+or
+
+`gcc @flags *.c`
+
 ## Usage
 After complilation, `_printf()` is ready for use.
 ### Example `main.c`:
@@ -37,6 +41,9 @@ The `_prinft()` function produces output in accordance to a specified format. Th
 - %i: Integer specifier
 - %s: String specifier (character pointer)
 - %%: Print the percentage sign
+- %o: Octal specifier
+- %x: Hexadecimal specifier
+- %X: Hexadecimal specifier (Uppercase)
 
 ## Custom Specifiers
 - %b: Binary specifier

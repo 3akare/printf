@@ -21,9 +21,12 @@ opcode get_func(char c)
 		{'b', print_binary_arg},
 		{'R', rot13_arg},
 		{'r', reverse_string_arg},
+		{'o', octal_arg},
+		{'x', hexadecimal_arg},
+		{'X', HEXADECIMAL_arg},
 		{0, NULL}
 	};
-	/** find a way to get the exact len int specifiers **/
+
 	while (specifiers[len].opcode != NULL)
 		len++;
 	for (i = 0; i < len; i++)

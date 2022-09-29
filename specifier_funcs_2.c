@@ -35,3 +35,35 @@ int reverse_string_arg(va_list argument)
 	free(str);
 	return (len);
 }
+
+/**
+ * octal_arg - prints an int in octal format
+ * @argument: an argument
+ * Return: return len of int in octal format
+ */
+
+int octal_arg(va_list argument)
+{
+	int num = 0;
+	int len = 0;
+
+	num = va_arg(argument, int);
+	len = _puts(convert(num, 8));
+	return (len);
+}
+
+/**
+ * HEXADECIMAL_arg - prints an int in hexadecimal format (UPPERCASE)
+ * @argument: an argument
+ * Return: return len of int in binary format
+ */
+
+int HEXADECIMAL_arg(va_list argument)
+{
+	int num = 0;
+	int len = 0;
+
+	num = va_arg(argument, int);
+	len = _puts(convert(num, 16));
+	return (len);
+}
