@@ -44,6 +44,7 @@ The `_prinft()` function produces output in accordance to a specified format. Th
 - %o: Octal specifier
 - %x: Hexadecimal specifier
 - %X: Hexadecimal specifier (Uppercase)
+- %p: Address specifier
 
 ## Custom Specifiers
 - %b: Binary specifier

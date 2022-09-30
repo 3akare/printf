@@ -23,6 +23,8 @@ _printf \- A formatted output conversion C program. It is a puesdo-recreation of
 
     %%: Print the percentage sign
 
+    %p: Print Addresses
+
 .SH CUSTOM SPECIFIERS
     %b : binary specifier
 
@@ -33,13 +35,16 @@ _printf \- A formatted output conversion C program. It is a puesdo-recreation of
     %S : String specifier (Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, followed by the ASCII code value in hexadecimal (upper case - always 2 characters))
 
 .SH BUGS
-    binary specifier might not give the right output for integer less than -2
+    binary specifier (%b) might not give the right output for integer less than -2
 
 .SH EXAMPLE
     To print a date and time in the form "Sunday, July 3, 10:02", where weekday and month are pointers to strings:
         '#include <stdio.h>
         _printf("%s, %s %d, %.2d:%.2d\n",
             weekday, month, day, hour, min);'
+
+.SH NOTE
+    Unfortunately, this version of printf can handle field width or precision for both custom and non-custom specifiers
 
 .SH SEE ALSO
     'puts(3) printf(3) scanf(3)''
