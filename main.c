@@ -7,9 +7,9 @@
 int main(void)
 {
 	/*int l = UINT_MAX + 1024;*/
-	int len = _printf("%X", UINT_MAX);
-	len = _printf("%X", -1024);
-	len = _printf("%x", UINT_MAX);
-	_printf("%d\n", len);
+	int len = _printf("%u", -1024);
+	_printf("uuoxxX%xuoXo\n", 1024);
+	_printf("%u == %o == %x == %X\n", 1024, 1024, 1024, 1024);
+	_printf("%d", len);
 	return (0);
 }

@@ -52,6 +52,6 @@ int unsigned_arg(va_list argument)
 	char unsign[20];
 
 	sprintf(unsign, "%u", number);
-	len += _printf("%s", unsign);
-	return (len + 1);
+	len = _printf("%s", unsign);
+	return (len);
 }
