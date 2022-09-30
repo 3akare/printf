@@ -2,14 +2,20 @@
 #include <limits.h>
 
 
-
-
 int main(void)
 {
-	/*int l = UINT_MAX + 1024;*/
-	int len = _printf("%u", -1024);
-	_printf("uuoxxX%xuoXo\n", 1024);
-	_printf("%u == %o == %x == %X\n", 1024, 1024, 1024, 1024);
-	_printf("%d", len);
+	/* int len, len2; */
+	long int l = UINT_MAX;
+
+	l += 1024;
+	_printf("%X", l);
+	/*len2 = printf("%X", l);
+	fflush(stdout);
+	if (len != len2)
+	{
+		printf("Lengths differ.\n");
+		fflush(stdout);
+		return (1);
+	}*/
 	return (0);
 }

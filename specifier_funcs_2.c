@@ -67,11 +67,11 @@ int octal_arg(va_list argument)
 
 int HEXADECIMAL_arg(va_list argument)
 {
-	long int num = 0;
+	int num = 0;
 	int len = 0;
 	char hexadecimal[20];
 
-	num = va_arg(argument, long int);
+	num = va_arg(argument, int);
 	if (num < 0)
 	{
 		sprintf(hexadecimal, "%X", num);
