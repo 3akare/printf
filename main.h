@@ -40,6 +40,7 @@ int octal_arg(va_list argument);
 int unsigned_arg(va_list argument);
 int HEXADECIMAL_arg(va_list argument);
 int hexadecimal_arg(va_list argument);
+int string_custom_arg(va_list argument);
 
 /** helper functions **/
 int print_number(int n);

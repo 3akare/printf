@@ -25,6 +25,7 @@ opcode get_func(char c)
 		{'u', unsigned_arg},
 		{'x', hexadecimal_arg},
 		{'X', HEXADECIMAL_arg},
+		{'S', string_custom_arg},
 		{0, NULL}
 	};
 
