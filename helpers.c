@@ -52,7 +52,7 @@ int _puts(char *s)
 int search(char c)
 {
 	int i = 0;
-	char arr[] = "aefghjklmnpqtvwyz%!";
+	char arr[] = "aefghjklmnqtvwyz%!";
 
 	for (i = 0; arr[i]; i++)
 	{

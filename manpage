@@ -21,12 +21,6 @@ _printf \- A formatted output conversion C program. It is a puesdo-recreation of
 
     %s: String specifier
 
-    %o: Octal specifier
-
-    %x: Hexadecimal specifier
-
-    %X: Hexadecimal specifier (Uppercase)
-
     %%: Print the percentage sign
 
 .SH CUSTOM SPECIFIERS
@@ -36,8 +30,10 @@ _printf \- A formatted output conversion C program. It is a puesdo-recreation of
 
     %r : reversed specifier
 
+    %S : String specifier (Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, followed by the ASCII code value in hexadecimal (upper case - always 2 characters))
+
 .SH BUGS
-    binary specifier (%b) might not give the right output for integer less than -2
+    binary specifier might not give the right output for integer less than -2
 
 .SH EXAMPLE
     To print a date and time in the form "Sunday, July 3, 10:02", where weekday and month are pointers to strings:

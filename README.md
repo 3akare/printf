@@ -49,6 +49,8 @@ The `_prinft()` function produces output in accordance to a specified format. Th
 - %b: Binary specifier
 - %R: rot13'ed specifier
 - %r: reversed specifier
+- %S: String specifier.
+ (Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, followed by the ASCII code value in hexadecimal (upper case - always 2 characters))
 
 # Author
 - David Bakare

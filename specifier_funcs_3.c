@@ -98,3 +98,22 @@ int string_custom_arg(va_list argument)
 	free(str);
 	return (len);
 }
+
+/**
+ * print_address_arg - prints addresses
+ * @argument: an argument
+ * Return: returns the len of a string
+ */
+
+int print_address_arg(va_list argument)
+{
+	long str;
+	char str3[20];
+	int len = 0;
+
+	str = va_arg(argument, long int);
+
+	sprintf(str3, "%p", str);
+	len += _printf("%s", str3);
+	return (len);
+}
