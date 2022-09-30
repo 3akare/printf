@@ -44,11 +44,18 @@ int reverse_string_arg(va_list argument)
 
 int octal_arg(va_list argument)
 {
+	char octal[20];
 	int num = 0;
 	int len = 0;
 
 	num = va_arg(argument, int);
-	len = _puts(convert(num, 8));
+	if (num < 0)
+	{
+		sprintf(octal, "%o", num);
+		len += _printf("%s", octal);
+	}
+	else
+		len = _puts(convert(num, 8));
 	return (len);
 }
 
@@ -62,8 +69,15 @@ int HEXADECIMAL_arg(va_list argument)
 {
 	long int num = 0;
 	int len = 0;
+	char hexadecimal[20];
 
 	num = va_arg(argument, long int);
-	len = _puts(convert(num, 16));
+	if (num < 0)
+	{
+		sprintf(hexadecimal, "%X", num);
+		len += _printf("%s", hexadecimal);
+	}
+	else
+		len = _puts(convert(num, 16));
 	return (len);
 }

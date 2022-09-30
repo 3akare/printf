@@ -43,7 +43,6 @@ int hexadecimal_arg(va_list argument);
 
 /** helper functions **/
 int print_number(int n);
-int unsigned_print_number(unsigned int n);
 int _puts(char *s);
 int search(char c);
 int print_binary(int n);

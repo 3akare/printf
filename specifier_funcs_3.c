@@ -11,21 +11,30 @@ int hexadecimal_arg(va_list argument)
 	int num = 0;
 	int len = 0;
 	char *str;
+	char hexadecimal[20];
 
 	num = va_arg(argument, int);
-	str = (convert(num, 16));
-	while (*str)
+	if (num < 0)
 	{
-		if (*str >= '0' && *str <= '9')
+		sprintf(hexadecimal, "%x", num);
+		len += _printf("%s", hexadecimal);
+	}
+	else
+	{
+		str = (convert(num, 16));
+		while (*str)
 		{
-			len++;
+			if (*str >= '0' && *str <= '9')
+			{
+				len++;
+				putchar(*str++);
+				continue;
+			}
+			else
+				*str += 32;
 			putchar(*str++);
-			continue;
+			len++;
 		}
-		else
-			*str += 32;
-		putchar(*str++);
-		len++;
 	}
 	return (len);
 }
@@ -40,7 +49,9 @@ int unsigned_arg(va_list argument)
 {
 	unsigned int number = va_arg(argument, unsigned int);
 	int len = 0;
+	char unsign[20];
 
-	len = unsigned_print_number(number);
+	sprintf(unsign, "%u", number);
+	len += _printf("%s", unsign);
 	return (len + 1);
 }

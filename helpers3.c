@@ -22,29 +22,3 @@ char *convert(long int num, int base)
 	} while (num != 0);
 	return (ptr);
 }
-
-/**
- * unsigned_print_number - prints an unsigned integer
- * @n: an integer
- * Return: the length of the integer
- */
-
-int unsigned_print_number(unsigned int n)
-{
-	unsigned int num = n;
-	unsigned int len = 0;
-
-	if (n <= 0)
-	{
-		putchar('-');
-		num *= -1;
-		len++;
-	}
-	if ((num / 10) > 0)
-	{
-		len++;
-		len += print_number(num / 10);
-	}
-	putchar((num % 10) + '0');
-	return (len);
-}
