@@ -31,9 +31,7 @@ int reverse_string_arg(va_list argument)
 	int len = 0;
 
 	str = strdup(va_arg(argument, char *));
-	len = strlen(str);
-	len -= 1;
-	reverse_string(str);
+	len += reverse_string(str);
 	free(str);
 	return (len);
 }
