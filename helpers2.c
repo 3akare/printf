@@ -95,5 +95,5 @@ int reverse_string(char *str)
 	{
 		putchar(str[len - i]);
 	}
-	return (len - 1);
+	return (len);
 }
