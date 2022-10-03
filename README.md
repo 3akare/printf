@@ -35,7 +35,7 @@ Output:
 ## Description
 The `_prinft()` function produces output in accordance to a specified format. This function prints its output to the stdout and returns the lenght of the output when successful.
 
-## Convertion Specifiers
+## Conversion Specifiers
 - %c: Character specifier
 - %d: Decimal specifier
 - %i: Integer specifier
