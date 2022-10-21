@@ -1,15 +1,11 @@
 # _printf
-A formatted output conversion C program. It is a puesdo-recreation of the C standard library function `printf`
+A formatted output conversion C program. It is a pseudo-recreation of the C standard library function `printf`
 
 ## Synopsis
 `int _printf(const char *format, ...);`
 
 ## Dependencies
 All files will be complied on Ubuntu 20.04LTS using gcc, using the options `gcc -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 *.c`
-
-or
-
-`gcc @flags *.c`
 
 ## Usage
 After complilation, `_printf()` is ready for use.
@@ -33,7 +29,7 @@ Output:
     $
 ```
 ## Description
-The `_prinft()` function produces output in accordance to a specified format. This function prints its output to the stdout and returns the lenght of the output when successful.
+The `_printf()` function produces output in accordance to a specified format. This function prints its output to the stdout and returns the lenght of the output when successful.
 
 ## Conversion Specifiers
 - %c: Character specifier
@@ -54,7 +50,7 @@ The `_prinft()` function produces output in accordance to a specified format. Th
  (Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, followed by the ASCII code value in hexadecimal (upper case - always 2 characters))
 
 # Author
-- David Bakare
+- [David Bakare](https://github.com/3akare)
 # Acknowledgments
 This project was written as part of the curriculum for Holberton/ALX-SE program
 
