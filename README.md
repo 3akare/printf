@@ -10,7 +10,7 @@ All files will be complied on Ubuntu 20.04LTS using gcc, using the options `gcc 
 ## Usage
 After complilation, `_printf()` is ready for use.
 ### Example `main.c`:
-```
+```c
     include "printf.h"
 
     int main(void)
@@ -19,11 +19,11 @@ After complilation, `_printf()` is ready for use.
     }
 ```
 Complilation:
-```
+```shell
     gcc -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 *.c -o tester
 ```
 Output:
-```
+```shell
     $ ./tester
     This is an implementation of printf
     $
