@@ -29,7 +29,7 @@ Output:
     $
 ```
 ## Description
-The `_printf()` function produces output in accordance to a specified format. This function prints its output to the stdout and returns the lenght of the output when successful.
+The `_printf()` function produces output in accordance to a specified format. This function prints its output to the stdout and returns the length of the output when successful.
 
 ## Conversion Specifiers
 - %c: Character specifier
