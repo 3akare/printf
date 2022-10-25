@@ -113,7 +113,7 @@ int print_address_arg(va_list argument)
 
 	str = va_arg(argument, long int);
 
-	sprintf(str3, "%p", str);
-	len += _printf("%s", str3);
+	sprintf(str3, "%ld", str);
+	len += fprintf(stdout,"%p", str3);
 	return (len);
 }
