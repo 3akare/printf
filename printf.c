@@ -2,10 +2,10 @@
 
 /**
  * _printf - a formatted output conversion C program.
- * desc: It is a puesdo-recreation of the C standard library function
+ * desc: It is a pseudo-recreation of the C standard library function
  * 'printf'
  * @format:a string to be formatted
- * Return: the lenght of the formatted string
+ * Return: the length of the formatted string
  */
 
 int _printf(const char *format, ...)
